@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/toplamaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="toplama"
+        android:text="Toplama"
+        app:layout_constraintBottom_toTopOf="@+id/carpmaButton"
+        app:layout_constraintEnd_toEndOf="@+id/carpmaButton"
+        app:layout_constraintStart_toStartOf="@+id/carpmaButton" />
+
+    <Button
+        android:id="@+id/cikarmaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="cikarma"
+        android:text="Çıkarma"
+        app:layout_constraintBottom_toTopOf="@+id/bolmeButton"
+        app:layout_constraintEnd_toEndOf="@+id/bolmeButton"
+        app:layout_constraintStart_toStartOf="@+id/bolmeButton" />
+
+    <Button
+        android:id="@+id/carpmaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="160dp"
+        android:onClick="carpma"
+        android:text="Çarpma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bolmeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:onClick="bolme"
+        android:text="Bölme"
+        app:layout_constraintBottom_toBottomOf="@+id/carpmaButton"
+        app:layout_constraintStart_toEndOf="@+id/carpmaButton" />
+
+    <EditText
+        android:id="@+id/sayi1text"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/toplamaButton"
+        app:layout_constraintStart_toStartOf="@+id/toplamaButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sayi2text"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/cikarmaButton"
+        app:layout_constraintStart_toStartOf="@+id/cikarmaButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sonucText"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/cikarmaButton"
+        app:layout_constraintEnd_toEndOf="@+id/cikarmaButton"
+        app:layout_constraintStart_toStartOf="@+id/toplamaButton"
+        app:layout_constraintTop_toBottomOf="@+id/sayi2text" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
